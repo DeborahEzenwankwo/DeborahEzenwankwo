@@ -3,30 +3,114 @@
 	padding: 0;
 	margin: 0;
 }
+@keyframes myAnime{
+	from{
+		content: "Web Developer";
+		color:crimson;
+	
+	}
+	to{
+		content: "software engineer";
+		color:rgb(45, 128, 206);
+		
+	}
+}
+body{
+	font-family: Tahoma, sans-serif;
+	line-height: 2rem;
+	
+}
 
-nav {
+header {
 	display: flex;
+	width: 100%;
 	justify-content: flex-end;
-	margin-right: 80px;
-	margin-bottom: 80px;
-	padding: 5px 5px 10px 0px;
+	padding: 5px 10% 10px 0px;
+	background-color: white;
+	box-shadow: 1px 5px 5px 1px silver;
+}
+nav{
+	display: flex;
 }
 
 ul {
 	list-style-type: none;
-	display: flex;
+	display:flex;
 	/* margin-left: 100px; */
 }
 nav li {
 	padding: 20px;
+	font-size: larger;
+	font-weight: 500;
+	font-family:   Tahoma, sans-serif;
 }
 
+i >img {
+	width: 40px;
+	height: 40px;
+	margin: 15px 5px;
+	display: none;
+}
+i>img:hover{
+	cursor: pointer;
+}
+.sidebar{
+	position:relative;
+	display: inline-block;
+	justify-content: center;
+	align-content: center;
+}
+.menu{
+	display: none;
+	position: absolute;
+	background-color:white;
+	text-align: center;
+	width: 200px;
+	height: 100vh;
+	padding: 5%;
+	border: 2px groove rgb(45, 128, 206) ;
+	border-radius: 10px;
+	z-index: 1;
+	top: 70px;
+	right: -48px;
+	
+}
+.sidebar:hover > .menu{
+	display: block;
+
+}
+.menu > p{
+	cursor: pointer;
+	padding: 10px;
+	display: block;
+	font-size: larger;
+	font-weight: 500;
+	font-family:   Tahoma, sans-serif;
+}
+.menu > p:hover{
+	box-shadow: 0px 3px 3px 3px rgb(231, 228, 228);
+	color:rgb(45, 128, 206);
+
+}
 .container img {
-	width: 80%;
-	justify-content: flex-end;
+	width: 300px;
+	height: 300px;
+	float: right;
 	border-radius: 50%;
-	margin-left: 20px;
-	box-shadow: 20px 10px 10px grey;
+	box-shadow: 1px 5px 5px 1px silver;
+	padding: 10px ;
+    
+	display: block;
+
+}
+.career::after{
+animation-name: myAnime ;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+animation-delay: 3s;
+animation-timing-function: ease-out;
+content: "Web Developer";
+animation-direction: normal;
 }
 p {
 	margin-top: 30px;
@@ -50,46 +134,86 @@ li:hover {
 	cursor: pointer;
 }
 .container {
-	margin-bottom: 80px;
+	align-content: center;
+	justify-content: space-between;
+	height: auto;
+	background-image: linear-gradient(to top left, rgb(45, 128, 206) 0%, white 50%);
+	padding: 18vh 10%;
 	display: flex;
+	flex-wrap: wrap-reverse;
+	/* background-color: rgb(45, 128, 206); */
+	
+	
+	
+	
 }
 .recentpost {
 	margin-left: 100px;
 }
 .container-one {
-	flex: 2;
-	margin-right: 100px;
-	margin-left: 100px;
+   max-width: 550px;
+   transition: 5s ease-in;
+    position: relative;
+
+	
 }
-.container-two {
-	flex: 1;
-	margin-right: 100px;
+.container-one > h1{
+	margin-top: 10px;
+}
+.container-one::after{
+	width: 20px;
+    height: 20px;
+	background-color: crimson;
+	position: absolute;
+	top: 50px;
+	right: 0px;
+	z-index: 100;
 
 }
+ 
 .second-container {
 	background-color: rgb(211, 209, 209);
 	display: flex;
-	padding: 20px;
+	flex-wrap: wrap;
+	padding: 60px;
 	margin-bottom: 50px;
+}
+.span{
+	font-size: 0.8rem;
+}
+.second-container h2{
+	color:rgb(45, 128, 206);
 }
 .container-three {
 	flex: 1;
 	background-color: white;
-	margin: 20px 15px 15px 100px;
-	padding: 20px 70px 20px 20px;
+	padding: 30px;
+	margin: 15px;
 	box-shadow: 10px 10px 5px grey;
 }
 .container-four {
 	flex: 1;
 	background-color: white;
-	margin: 20px 100px 15px 0px;
-	padding: 20px 70px 20px 20px;
+	padding: 30px;
+	margin: 15px;
 	box-shadow: 10px 10px 5px grey;
 }
 .third-container {
 	display: flex;
     margin-top: 40px;
 
+}
+@media screen and (max-width:550px) {
+	.container-five{
+		display: none;
+	}
+	i >img{
+		display: block;
+	}
+	nav{
+		display: none;
+	}
+	
 }
 .container-five img {
 	width: 250px;
@@ -160,6 +284,6 @@ footer p{
     padding: 20px 0px;
 
 }
-span{
-    color: blue;
+.author{
+    color: rgb(45, 128, 206);
 }
