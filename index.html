@@ -4,8 +4,13 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta name="author" content="Deborah Ezenwankwo"/>
+		<meta name="title" content="portfolio">
+		<meta name="description" content="web developer portfolio">
+		<meta name="keywords" content="web development, web developer, frontend developer, full stack developer, portfolio, software engineer">
 		<link rel="stylesheet" href="style.css" />
-		<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+		<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
 
 		<title>portfolio</title>
 		<script src="index.js"></script>
@@ -54,6 +59,7 @@
 			</div>
 
 			<div class="second-container" id="blogs">
+				
 				<div class="container-three">
 					<h2>Making a design system from scratch</h2>
 					<p class="span">6th Dec. 2021 | Design Pattern</p>
@@ -76,6 +82,49 @@
 						quod doloremque doloribus!
 						lore
 					</p>
+				</div>
+			</div>
+
+			<div class="video-container">
+				<h2>Do You Want To Learn How to Make a Web?</h2>
+				
+				<div class="vid">
+					<div class="video-wrapper">
+						<video src="./img/30 Second Explainer Videos.mp4" width="400" height="320" controls>Your browser doesn't support the video</video>
+					</div>
+
+					<div class="learn-video">
+						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Magnam minus aliquid neque saepe inventore aspernatur consequatur. Officiis, suscipit aperiam pariatur non numquam ea fugit necessitatibus porro illo, sit delectus unde?</p>
+
+						<div class="vid-icons">
+							<span><i class="material-icons" id="blue" onclick="blueColor()">thumb_up</i><span>Like</span></span>
+
+							<span><i class="material-icons" id="red" onclick="redColor()">favorite</i>favorite</span>
+
+							<span><i class="material-icons" onclick="seeComment()">comment</i>comment</span>
+
+							<span>
+								<i class="material-icons">share</i>share
+							</span>
+
+							<div class="comment-area">
+								<div id="text"><textarea  cols="30" rows="5" placeholder="type comment..." id="myComment"></textarea>
+									<div class="comment-btn">
+										<button onclick="getComment();">submit</button>
+									</div>
+									<div id="error-msg"></div>
+								</div>
+
+								<div id="comments">
+									<div id="date"></div>
+                                  <img src="./img/dora.jpg" width="50px" height="50px" style="border-radius: 50%; float: left; " alt="">
+
+								<div id="commented"></div>
+								</div>
+							</div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 

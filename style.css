@@ -3,6 +3,43 @@
 	padding: 0;
 	margin: 0;
 }
+
+@font-face {
+	font-family: 'Material Icons';
+	font-style: normal;
+	font-weight: 400;
+	src: url(https://example.com/MaterialIcons-Regular.eot); /* For IE6-8 */
+	src: local('Material Icons'),
+	  local('MaterialIcons-Regular'),
+	  url(https://example.com/MaterialIcons-Regular.woff2) format('woff2'),
+	  url(https://example.com/MaterialIcons-Regular.woff) format('woff'),
+	  url(https://example.com/MaterialIcons-Regular.ttf) format('truetype');
+  }
+  .material-icons {
+	font-family: 'Material Icons';
+	font-weight: normal;
+	font-style: normal;
+	font-size: 24px;  /* Preferred icon size */
+	display: inline-block;
+	line-height: 2;
+	text-transform: none;
+	letter-spacing: normal;
+	word-wrap: normal;
+	white-space: nowrap;
+	direction: ltr;
+  
+	/* Support for all WebKit browsers. */
+	-webkit-font-smoothing: antialiased;
+	/* Support for Safari and Chrome. */
+	text-rendering: optimizeLegibility;
+  
+	/* Support for Firefox. */
+	-moz-osx-font-smoothing: grayscale;
+  
+	/* Support for IE. */
+	font-feature-settings: 'liga';
+  }
+
 @keyframes myAnime{
 	from{
 		content: "Web Developer";
@@ -16,8 +53,11 @@
 	}
 }
 body{
-	font-family: Tahoma, sans-serif;
+	font-family: cursive;
+	font-size: large;
 	line-height: 2rem;
+	
+
 	
 }
 
@@ -42,9 +82,12 @@ nav li {
 	padding: 20px;
 	font-size: larger;
 	font-weight: 500;
-	font-family:   Tahoma, sans-serif;
+	font-family: cursive;
 }
-
+a{
+	text-decoration: none;
+	color: black;
+}
 i >img {
 	width: 40px;
 	height: 40px;
@@ -130,7 +173,7 @@ button:hover {
 	cursor: pointer;
 }
 li:hover {
-	color: crimson;
+     color: black;
 	cursor: pointer;
 }
 .container {
@@ -175,8 +218,8 @@ li:hover {
 	background-color: rgb(211, 209, 209);
 	display: flex;
 	flex-wrap: wrap;
-	padding: 60px;
-	margin-bottom: 50px;
+	padding: 70px;
+
 }
 .span{
 	font-size: 0.8rem;
@@ -198,11 +241,92 @@ li:hover {
 	margin: 15px;
 	box-shadow: 10px 10px 5px grey;
 }
+.video-container{
+	background-image: radial-gradient(circle at left, rgb(45, 128, 206) 50%, white 50%);
+	color: black;
+	justify-content: center;
+	align-items: center;
+	border: 3px solid silver;
+	
+}
+.video-container > h2{
+	text-align: center;
+	color: crimson;
+	margin-top: 40px;
+}
+.vid{
+	justify-content: center;
+
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+}
+.video-wrapper{
+	flex: 1;
+}
+.learn-video{
+	flex: 1;
+	padding: 10px;
+	position: relative;
+
+}
+.vid-icons{
+	padding: 15px;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+.vid-icons > span> i:hover {
+	cursor: pointer;
+	padding: 10px;
+	box-shadow: 1px 5px 1px silver;
+}
+.comment-area{
+	display: flex;
+	flex-wrap: wrap;
+}
+#text{
+	display: none;
+	padding-bottom: 20px;
+	justify-content: center;
+	align-items: center;
+	
+	
+}
+
+textarea{
+	background-color: silver;
+	color: black;
+	border: none;
+	outline: none;
+	resize: none;
+	border-radius: 10px;
+	
+}
+#comments{
+	justify-content: space-between;
+	display: none;
+	border: 2px solid silver;
+	padding: 5px;
+	width: 300px;
+	height: 150px;
+}
+#commented{
+	width: 200px;
+	height: 70px;
+	background-color:white;
+	color: black;
+	font-size: 18px;
+	margin: 10px;
+}
 .third-container {
 	display: flex;
     margin-top: 40px;
 
 }
+
+
+
+
 @media screen and (max-width:550px) {
 	.container-five{
 		display: none;
@@ -213,6 +337,7 @@ li:hover {
 	nav{
 		display: none;
 	}
+	
 	
 }
 .container-five img {
