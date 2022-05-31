@@ -48,8 +48,17 @@ function seeComment (){
       }else{
         document.getElementById("comments").style.display="block";
         const newComment = document.getElementById("myComment").value;
-        document.getElementById("commented").innerHTML = newComment;
+        document.getElementById("p-comment").innerHTML = newComment;
+        
 
       }
-   
 }
+
+      function deleteComment (){
+        
+        const checkComment = document.getElementById("commented");
+          var firstChild = checkComment.firstElementChild
+
+          firstChild.remove();
+      }
+   
