@@ -40,15 +40,18 @@ function seeComment (){
     }else{
             document.getElementById("text").style.display="block";
         }
-    
 }
+
+
+
   function getComment () {
       if(document.getElementById("myComment").value == null){
           document.getElementById("error-msg").innerHTML="Type message";
       }else{
         document.getElementById("comments").style.display="block";
         const newComment = document.getElementById("myComment").value;
-        document.getElementById("p-comment").innerHTML = newComment;
+
+        document.getElementById("commented").innerHTML = newComment;
         
 
       }
